@@ -33,6 +33,7 @@ async function main() {
           "https://cdn.shopify.com/s/files/1/1762/7269/files/IMG-4765_1000x1000.jpg?v=1751352855",
         quantity: 50,
       },
+
       {
         name: "Beige.",
         price: 12,
@@ -45,14 +46,62 @@ async function main() {
         image: "/images/covered.png",
         quantity: 50,
       },
+
       {
         name: "Drowning.",
         price: 12,
         image: "/images/drowning.png",
         quantity: 50,
       },
+
+      {
+        name: "Future.",
+        price: 12,
+        image: "/images/future.png",
+        quantity: 50,
+      },
+
+      {
+        name: "Italy.",
+        price: 12,
+        image: "/images/italy.png",
+        quantity: 50,
+      },
+      {
+        name: "Liberty.",
+        price: 12,
+        image: "/images/liberty.png",
+        quantity: 50,
+      },
+      {
+        name: "Logo.",
+        price: 12,
+        image: "/images/logo.jpg",
+        quantity: 50,
+      },
+
+      {
+        name: "Mary.",
+        price: 12,
+        image: "/images/mary.png",
+        quantity: 50,
+      },
+
+      {
+        name: "Smiths.",
+        price: 12,
+        image: "/images/smiths.png",
+        quantity: 50,
+      },
+
+      {
+        name: "Vintage.",
+        price: 12,
+        image: "/images/vintage.png",
+        quantity: 50,
+      },
     ],
-    skipDuplicates: true,
+    skipDuplicates: false,
   });
   console.log("Seed data inserted successfully.");
 }
