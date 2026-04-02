@@ -57,7 +57,7 @@ export default async function Page() {
               >
                 {/* IMAGE */}
                 <div className="w-20 h-24 bg-gray-100 overflow-hidden">
-                  <Image
+                  <img
                     src={item.product.image}
                     className="w-full h-full object-cover transition duration-700 hover:scale-105"
                   />
