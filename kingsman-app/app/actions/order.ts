@@ -35,7 +35,7 @@ export const createOrder = async () => {
     },
   });
 
-  // get orderItem, getProductId, Map inside, then reduce the product depending on quantity of OrderItem. Simple!
+  // get orderItem, getProductId, Map inside, then reduce the product depending on quantity of OrderItem.
   const orderItem = await prisma.orderItem.findMany({
     where: { orderId: orderCreate.id },
     include: { product: true },

@@ -47,7 +47,7 @@ export default function Product() {
   }, [fetchMore]);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-10 px-4 md:px-10 py-10">
+    <div className="grid grid-cols-2 relative md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-10 px-4 md:px-10 py-10">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

@@ -1,8 +1,20 @@
 import { ProductProps } from "@/app/types/types";
 import Image from "next/image";
 import { addToCart } from "@/app/actions/cart";
+import CartSuccessBox from "./cart/CartSuccessBox";
+import { useState } from "react";
 
 const ProductItem = ({ product }: ProductProps) => {
+  const [isAddedCart, setIsAddedCart] = useState(false);
+  const setCartVisibility = async () => {
+    setTimeout(() => {
+      setIsAddedCart(true);
+      setTimeout(() => {
+        setIsAddedCart(false);
+      }, 1000);
+    }, 1000);
+  };
+
   return (
     <div className="group relative flex flex-col gap-4">
       {/* IMAGE CONTAINER */}
@@ -20,12 +32,17 @@ const ProductItem = ({ product }: ProductProps) => {
         {/* QUICK ACTION */}
         <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition duration-500">
           <button
-            className="w-full bg-black text-white py-3 text-sm tracking-widest uppercase"
-            onClick={() => addToCart(product.id)}
+            className={`w-full  bg-black ${product.quantity < 1 && "line-through opacity-80"} text-white py-3 text-sm tracking-widest uppercase`}
+            onClick={() => {
+              addToCart(product.id);
+              setCartVisibility();
+            }}
+            disabled={product.quantity < 1}
           >
             Add to Cart
           </button>
         </div>
+        {isAddedCart && <CartSuccessBox />}
       </div>
 
       {/* TEXT */}

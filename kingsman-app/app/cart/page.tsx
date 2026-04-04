@@ -60,6 +60,8 @@ export default async function Page() {
                   <Image
                     src={item.product.image || ""}
                     alt={item.product.name}
+                    width="150"
+                    height="150"
                     className="w-full h-full object-cover transition duration-700 hover:scale-105"
                   />
                 </div>
