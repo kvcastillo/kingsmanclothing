@@ -11,4 +11,3 @@
 #6 You will be redirected, but you can view your Orders in the Navigation Menu
 
 -- This is just a mockup on how I would approach in creating an e-commerce type of website application. More advanced features like payment isn't in the functions yet. It's still in the works.
-g
