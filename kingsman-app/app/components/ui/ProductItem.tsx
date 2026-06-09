@@ -6,12 +6,10 @@ import { useState } from "react";
 
 const ProductItem = ({ product }: ProductProps) => {
   const [isAddedCart, setIsAddedCart] = useState(false);
-  const setCartVisibility = async () => {
+  const setCartVisibility = () => {
+    setIsAddedCart(true);
     setTimeout(() => {
-      setIsAddedCart(true);
-      setTimeout(() => {
-        setIsAddedCart(false);
-      }, 1000);
+      setIsAddedCart(false);
     }, 1000);
   };
 

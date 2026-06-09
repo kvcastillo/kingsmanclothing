@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Kingsman Co.",
-  description: "An e-commerce testing",
+  description:
+    "Kingsman Co. — A full-stack e-commerce platform built with Next.js 14, TypeScript, Prisma ORM, PostgreSQL, and Tailwind CSS.",
 };
 
 export default function RootLayout({
